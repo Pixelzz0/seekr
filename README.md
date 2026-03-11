@@ -118,12 +118,9 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ## Features
 
-- **Drag & drop** upload for video, audio, and images
-- **Real-time upload progress** for video files
 - **Duplicate detection** via SHA-256 file hashing — no wasted API calls
 - **Semantic search** across all media types
 - **Click-to-seek** — click a video/audio result to jump to that timestamp
-- **Image gallery** — browse random indexed images, search returns a navigable viewer
 - **Mobile responsive** — works on phones and tablets
 
 ## Project Structure
