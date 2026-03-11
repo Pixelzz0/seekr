@@ -120,7 +120,7 @@ app.post('/api/upload-audio', audioUpload.single('audio'), async (req, res) => {
       console.log(`[DUPLICATE] Audio rejected: ${req.file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
       await fsp.unlink(newPath);
       const { data: existing } = await supabase.from('seekr_media').select('frame').eq('file_hash', fileHash).eq('type', 'audio').limit(1);
-      const existingFile = existing?.[0]?.frame ?? null;
+      const existingFile = existing?.[0]?.frame ? path.basename(existing[0].frame) : null;
       return res.status(409).json({ error: 'This audio has already been uploaded and processed', existingFile });
     }
     console.log(`[NEW] Processing audio: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
