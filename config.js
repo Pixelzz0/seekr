@@ -6,7 +6,6 @@ import { createClient } from "@supabase/supabase-js";
 if (!process.env.OPENAI_KEY) throw new Error("OpenAI API key is missing or invalid.");
 export const openai = new OpenAI({
   apiKey: process.env.OPENAI_KEY,
-  dangerouslyAllowBrowser: true
 });
 
 /** Supabase config */

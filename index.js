@@ -41,24 +41,20 @@ async function analyzeFrame(imagePath, timestamp) {
 
 async function embedAndStore(results, fileHash) {
   console.log('Embedding and storing...');
-  for (const result of results) {
-    const embeddingResponse = await openai.embeddings.create({
-      model: 'text-embedding-3-large',
-      input: result.description
-    });
-    const embedding = embeddingResponse.data[0].embedding;
-    const { error } = await supabase.from('seekr_media').insert({
-      timestamp: result.timestamp,
-      frame: result.frame,
-      description: result.description,
-      embedding,
-      type: result.type ?? 'video',
-      file_hash: fileHash ?? null
-    });
-    if (error) console.error(`Error storing ${result.timestamp}:`, error);
-    else console.log(`Stored [${result.timestamp}s]`);
-  }
-  console.log('All stored!');
+  const embeddings = await Promise.all(
+    results.map(r => openai.embeddings.create({ model: 'text-embedding-3-large', input: r.description }))
+  );
+  const rows = results.map((r, i) => ({
+    timestamp: r.timestamp,
+    frame: r.frame,
+    description: r.description,
+    embedding: embeddings[i].data[0].embedding,
+    type: r.type ?? 'video',
+    file_hash: fileHash ?? null
+  }));
+  const { error } = await supabase.from('seekr_media').insert(rows);
+  if (error) console.error('Error storing batch:', error);
+  else console.log(`Stored ${rows.length} item(s)`);
 }
 
 export async function processVideo(videoPath, fileHash) {
@@ -158,22 +154,7 @@ export async function processImages(images) {
     const description = response.choices[0].message.content;
     console.log(`${filename}: ${description}`);
 
-    const embeddingResponse = await openai.embeddings.create({
-      model: 'text-embedding-3-large',
-      input: description
-    });
-
-    const { error } = await supabase.from('seekr_media').insert({
-      timestamp: 0,
-      frame: `/images/${filename}`,
-      description,
-      embedding: embeddingResponse.data[0].embedding,
-      type: 'image',
-      file_hash: fileHash ?? null
-    });
-
-    if (error) console.error(`Error storing ${filename}:`, error);
-    else console.log(`Stored ${filename}`);
+    await embedAndStore([{ timestamp: 0, frame: `/images/${filename}`, description, type: 'image' }], fileHash);
   }
 
   console.log('All images processed!');

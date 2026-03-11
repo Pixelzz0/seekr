@@ -444,7 +444,13 @@
         images.forEach((img, i) => {
           const card = document.createElement('div');
           card.className = 'image-preview-card';
-          card.innerHTML = `<img src="${img.frame}" alt="" /><p>${img.description}</p>`;
+          const thumb = document.createElement('img');
+          thumb.src = img.frame;
+          thumb.alt = '';
+          const caption = document.createElement('p');
+          caption.textContent = img.description;
+          card.appendChild(thumb);
+          card.appendChild(caption);
           card.addEventListener('click', () => {
             imageResultsData = images;
             imageViewer.classList.add('visible');
@@ -477,7 +483,21 @@
           xhr.addEventListener('load', () => {
             const res = JSON.parse(xhr.responseText);
             if (xhr.status === 429) { setStatus(videoStatus, 'another file is processing — please wait', 'error'); videoBadge.textContent = 'error'; return reject(null); }
-            if (xhr.status === 409) { setStatus(videoStatus, 'this video has already been uploaded and processed', 'error'); videoBadge.textContent = 'duplicate'; console.warn('[DUPLICATE]', file.name, '— already indexed'); return reject(null); }
+            if (xhr.status === 409) {
+              if (res.existingFile) {
+                videoPlayer.src = `/video/${res.existingFile}`;
+                playerWrap.classList.add('visible');
+                videoSearch.disabled = false;
+                videoSearchBtn.disabled = false;
+                videoBadge.textContent = res.existingFile;
+                setStatus(videoStatus, 'already indexed — loaded for searching', 'done');
+              } else {
+                setStatus(videoStatus, 'this video has already been uploaded and processed', 'error');
+                videoBadge.textContent = 'duplicate';
+              }
+              console.warn('[DUPLICATE]', file.name, '— already indexed');
+              return reject(null);
+            }
             if (xhr.status >= 400) return reject(new Error(res.error));
             resolve(res);
           });
@@ -508,7 +528,22 @@
         const res = await fetch('/api/upload-audio', { method: 'POST', body: formData });
         const data = await res.json();
         if (res.status === 429) { setStatus(audioStatus, 'another file is processing — please wait', 'error'); audioBadge.textContent = 'error'; return; }
-        if (res.status === 409) { setStatus(audioStatus, 'this audio has already been uploaded and processed', 'error'); audioBadge.textContent = 'duplicate'; console.warn('[DUPLICATE]', file.name, '— already indexed'); return; }
+        if (res.status === 409) {
+          if (data.existingFile) {
+            audioPlayer.src = `/audio/${data.existingFile}`;
+            audioPlayerWrap.classList.add('visible');
+            audioCardName.textContent = data.existingFile;
+            audioSearch.disabled = false;
+            audioSearchBtn.disabled = false;
+            audioBadge.textContent = data.existingFile;
+            setStatus(audioStatus, 'already indexed — loaded for searching', 'done audio');
+          } else {
+            setStatus(audioStatus, 'this audio has already been uploaded and processed', 'error');
+            audioBadge.textContent = 'duplicate';
+          }
+          console.warn('[DUPLICATE]', file.name, '— already indexed');
+          return;
+        }
         if (!res.ok) throw new Error(data.error);
         audioPlayer.src = `/audio/${data.filename}`;
         audioPlayerWrap.classList.add('visible');
@@ -574,11 +609,18 @@
           const timeStr = `${minutes}:${String(seconds).padStart(2, '0')}`;
           const el = document.createElement('div');
           el.className = `result-item ${type}`;
-          el.innerHTML = `
-            <div class="result-time">${timeStr}</div>
-            <div class="result-desc">${r.description}</div>
-            <div class="result-pct">${(r.similarity * 100).toFixed(0)}%</div>
-          `;
+          const timeDiv = document.createElement('div');
+          timeDiv.className = 'result-time';
+          timeDiv.textContent = timeStr;
+          const descDiv = document.createElement('div');
+          descDiv.className = 'result-desc';
+          descDiv.textContent = r.description;
+          const pctDiv = document.createElement('div');
+          pctDiv.className = 'result-pct';
+          pctDiv.textContent = `${(r.similarity * 100).toFixed(0)}%`;
+          el.appendChild(timeDiv);
+          el.appendChild(descDiv);
+          el.appendChild(pctDiv);
           el.addEventListener('click', () => {
             const isPaused = player.paused;
             player.currentTime = r.timestamp;

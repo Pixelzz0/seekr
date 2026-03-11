@@ -18,8 +18,13 @@ function sanitizeFilename(original) {
 }
 
 function hashFile(filePath) {
-  const data = fs.readFileSync(filePath);
-  return crypto.createHash('sha256').update(data).digest('hex');
+  return new Promise((resolve, reject) => {
+    const hash = crypto.createHash('sha256');
+    fs.createReadStream(filePath)
+      .on('data', chunk => hash.update(chunk))
+      .on('end', () => resolve(hash.digest('hex')))
+      .on('error', reject);
+  });
 }
 
 async function isDuplicate(fileHash) {
@@ -31,8 +36,20 @@ async function isDuplicate(fileHash) {
   return data?.length > 0;
 }
 
+const fsp = fs.promises;
+
+const searchRequests = new Map();
+function checkRateLimit(ip) {
+  const now = Date.now();
+  const entry = searchRequests.get(ip) ?? { count: 0, reset: now + 60_000 };
+  if (now > entry.reset) { entry.count = 0; entry.reset = now + 60_000; }
+  entry.count++;
+  searchRequests.set(ip, entry);
+  return entry.count <= 30;
+}
+
 const app = express();
-app.use(cors());
+app.use(cors({ origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/video', express.static('video-in'));
@@ -53,26 +70,33 @@ let isImageProcessing = false;
 
 app.post('/api/upload', videoUpload.single('video'), async (req, res) => {
   if (isVideoProcessing) return res.status(429).json({ error: 'Video already processing, please wait...' });
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
   if (!ALLOWED_VIDEO_EXT.test(req.file.originalname)) {
-    fs.unlinkSync(req.file.path);
+    await fsp.unlink(req.file.path);
     return res.status(400).json({ error: 'Invalid video file type' });
   }
   isVideoProcessing = true;
   const safeName = sanitizeFilename(req.file.originalname);
   const newPath = path.join('video-in', safeName);
-  fs.renameSync(req.file.path, newPath);
+  await fsp.rename(req.file.path, newPath);
   try {
-    const fileHash = hashFile(newPath);
+    const fileHash = await hashFile(newPath);
     if (await isDuplicate(fileHash)) {
       console.log(`[DUPLICATE] Video rejected: ${req.file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
-      fs.unlinkSync(newPath);
-      isVideoProcessing = false;
-      return res.status(409).json({ error: 'This video has already been uploaded and processed' });
+      await fsp.unlink(newPath);
+      const videoFiles = await fsp.readdir('video-in');
+      let existingFile = null;
+      for (const f of videoFiles) {
+        if (!ALLOWED_VIDEO_EXT.test(f)) continue;
+        if (await hashFile(path.join('video-in', f)) === fileHash) { existingFile = f; break; }
+      }
+      return res.status(409).json({ error: 'This video has already been uploaded and processed', existingFile });
     }
     console.log(`[NEW] Processing video: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
     await processVideo(`./${newPath}`, fileHash);
     res.json({ success: true, filename: safeName, type: 'video' });
   } catch (err) {
+    fsp.unlink(newPath).catch(() => {});
     res.status(500).json({ error: err.message });
   } finally {
     isVideoProcessing = false;
@@ -81,26 +105,29 @@ app.post('/api/upload', videoUpload.single('video'), async (req, res) => {
 
 app.post('/api/upload-audio', audioUpload.single('audio'), async (req, res) => {
   if (isAudioProcessing) return res.status(429).json({ error: 'Audio already processing, please wait...' });
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
   if (!ALLOWED_AUDIO_EXT.test(req.file.originalname)) {
-    fs.unlinkSync(req.file.path);
+    await fsp.unlink(req.file.path);
     return res.status(400).json({ error: 'Invalid audio file type' });
   }
   isAudioProcessing = true;
   const safeName = sanitizeFilename(req.file.originalname);
   const newPath = path.join('audio-in', safeName);
-  fs.renameSync(req.file.path, newPath);
+  await fsp.rename(req.file.path, newPath);
   try {
-    const fileHash = hashFile(newPath);
+    const fileHash = await hashFile(newPath);
     if (await isDuplicate(fileHash)) {
       console.log(`[DUPLICATE] Audio rejected: ${req.file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
-      fs.unlinkSync(newPath);
-      isAudioProcessing = false;
-      return res.status(409).json({ error: 'This audio has already been uploaded and processed' });
+      await fsp.unlink(newPath);
+      const { data: existing } = await supabase.from('seekr_media').select('frame').eq('file_hash', fileHash).eq('type', 'audio').limit(1);
+      const existingFile = existing?.[0]?.frame ?? null;
+      return res.status(409).json({ error: 'This audio has already been uploaded and processed', existingFile });
     }
     console.log(`[NEW] Processing audio: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
     await processAudio(`./${newPath}`, safeName, fileHash);
     res.json({ success: true, filename: safeName, type: 'audio' });
   } catch (err) {
+    fsp.unlink(newPath).catch(() => {});
     res.status(500).json({ error: err.message });
   } finally {
     isAudioProcessing = false;
@@ -114,16 +141,16 @@ app.post('/api/upload-images', imageUpload.array('images', 50), async (req, res)
     const results = [];
     for (const file of req.files) {
       if (!ALLOWED_IMAGE_EXT.test(file.originalname)) {
-        fs.unlinkSync(file.path);
+        await fsp.unlink(file.path);
         continue;
       }
       const safeName = sanitizeFilename(file.originalname);
       const newPath = path.join('image-in', safeName);
-      fs.renameSync(file.path, newPath);
-      const fileHash = hashFile(newPath);
+      await fsp.rename(file.path, newPath);
+      const fileHash = await hashFile(newPath);
       if (await isDuplicate(fileHash)) {
         console.log(`[DUPLICATE] Image skipped: ${file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
-        fs.unlinkSync(newPath);
+        await fsp.unlink(newPath);
         continue;
       }
       console.log(`[NEW] Processing image: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
@@ -139,10 +166,12 @@ app.post('/api/upload-images', imageUpload.array('images', 50), async (req, res)
 });
 
 app.get('/api/videos', async (req, res) => {
-  const videos = fs.readdirSync('./video-in')
-    .filter(f => /\.(mp4|mov|avi|webm)$/i.test(f));
-  const audios = fs.readdirSync('./audio-in')
-    .filter(f => /\.(mp3|mp4|mpeg|mpga|m4a|wav|webm)$/i.test(f));
+  const [all_videos, all_audios] = await Promise.all([
+    fsp.readdir('./video-in'),
+    fsp.readdir('./audio-in'),
+  ]);
+  const videos = all_videos.filter(f => /\.(mp4|mov|avi|webm)$/i.test(f));
+  const audios = all_audios.filter(f => /\.(mp3|mp4|mpeg|mpga|m4a|wav|webm)$/i.test(f));
   res.json({ videos, audios });
 });
 
@@ -152,16 +181,16 @@ app.get('/api/random-images', async (req, res) => {
       .from('seekr_media')
       .select('frame, description')
       .eq('type', 'image')
-      .limit(50);
+      .limit(5);
     if (error) return res.status(500).json({ error: error.message });
-    const shuffled = data.sort(() => Math.random() - 0.5).slice(0, 5);
-    res.json(shuffled);
+    res.json(data);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
 app.get('/api/search', async (req, res) => {
+  if (!checkRateLimit(req.ip)) return res.status(429).json({ error: 'Too many requests' });
   const { q, type } = req.query;
   if (!q) return res.status(400).json({ error: 'No query provided' });
   try {
