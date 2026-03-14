@@ -38,6 +38,17 @@ bower_components
 build/Release
 
 # Dependency directories
+audio-in/*
+!audio-in/.gitkeep
+
+image-in/*
+!image-in/.gitkeep
+
+video-in/*
+!video-in/.gitkeep
+
+video-out/*
+!video-out/.gitkeep
 node_modules/
 jspm_packages/
 
