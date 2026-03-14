@@ -130,7 +130,9 @@ Open [http://localhost:3000](http://localhost:3000)
 ├── index.js         # Media processing (frames, transcription, embeddings)
 ├── server.js        # Express API routes + file handling
 ├── public/
-│   └── index.html   # Frontend (HTML + CSS + JS)
+│   ├── index.html   # HTML structure
+│   ├── style.css    # Styles
+│   └── app.js       # Frontend logic
 ├── video-in/        # Uploaded videos
 ├── audio-in/        # Uploaded audio
 ├── image-in/        # Uploaded images
@@ -147,7 +149,7 @@ Open [http://localhost:3000](http://localhost:3000)
 | `POST` | `/api/upload-images` | Upload and process images |
 | `GET` | `/api/search?q=...&type=...` | Semantic search (type: video/audio/image) |
 | `GET` | `/api/videos` | List uploaded video/audio files |
-| `GET` | `/api/random-images` | Get 5 random indexed images |
+| `GET` | `/api/images` | List all indexed images (newest first) |
 
 ## License
 
