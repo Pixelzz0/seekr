@@ -1,0 +1,854 @@
+[
+  {
+    "timestamp": 0,
+    "frame": "frame_0001.jpg",
+    "description": "A shot of Earth from space with the sun rising over the planet’s curved horizon. Centered over the image is the BBC Earth \"real happiness project\" title and a crescent-shaped logo.",
+    "type": "video"
+  },
+  {
+    "timestamp": 1,
+    "frame": "frame_0002.jpg",
+    "description": "A view of Earth from space with sunlight peeking over the horizon, casting the planet in shadow and light. Centered over the globe is the BBC Earth \"real happiness project\" logo with a crescent graphic.",
+    "type": "video"
+  },
+  {
+    "timestamp": 2,
+    "frame": "frame_0003.jpg",
+    "description": "An aerial view of sweeping sand dunes bathed in warm sunrise or sunset light, with low mist or fog rolling over the ridges. The contrast of glowing orange sand and soft gray fog creates a dramatic, otherworldly landscape.",
+    "type": "video"
+  },
+  {
+    "timestamp": 3,
+    "frame": "frame_0004.jpg",
+    "description": "An aerial view of a long line of sand dunes at sunrise or sunset, their crests glowing orange as low fog or mist rolls over and fills the valleys, casting soft shadows.",
+    "type": "video"
+  },
+  {
+    "timestamp": 4,
+    "frame": "frame_0005.jpg",
+    "description": "Sunlight pierces heavy, textured clouds, casting dramatic rays down into a misty mountain valley. In the foreground, snow-dusted rocks lead to jagged, partially snow-covered peaks.",
+    "type": "video"
+  },
+  {
+    "timestamp": 5,
+    "frame": "frame_0006.jpg",
+    "description": "A rugged, snow-dusted mountain ridge dominates the foreground while dramatic, heavy clouds part overhead and shafts of sunlight pierce down onto the distant peaks. Thin mist drifts through the valleys, giving the scene a moody, high-altitude atmosphere.",
+    "type": "video"
+  },
+  {
+    "timestamp": 6,
+    "frame": "frame_0007.jpg",
+    "description": "Sunlight breaks through clouds over misty mountains, sending dramatic rays down the slopes. The beams illuminate flooded terraced rice paddies below, which mirror the light in shimmering patterns.",
+    "type": "video"
+  },
+  {
+    "timestamp": 7,
+    "frame": "frame_0008.jpg",
+    "description": "Sunlight breaks through clouds over misty mountains, casting rays down onto a landscape of flooded terraced fields that reflect the sky like mirrors. The scene feels calm and atmospheric, capturing the contrast between the glowing water-filled paddies and the shadowed ridgelines.",
+    "type": "video"
+  },
+  {
+    "timestamp": 8,
+    "frame": "frame_0009.jpg",
+    "description": "The sun sits low on the horizon above a wide mossy plain dotted with shallow reflective pools, while lingering patches of snow melt in the foreground.",
+    "type": "video"
+  },
+  {
+    "timestamp": 9,
+    "frame": "frame_0010.jpg",
+    "description": "The sun sits low near the horizon, casting bright light and lens flares that reflect in shallow pools of water. The scene shows a marshy, grassy landscape with patches of melting snow and distant hills.",
+    "type": "video"
+  },
+  {
+    "timestamp": 10,
+    "frame": "frame_0011.jpg",
+    "description": "A close-up of a zebra's striped legs and hooves as it walks along a dusty, sunlit path through dry grass in a savanna-like landscape.",
+    "type": "video"
+  },
+  {
+    "timestamp": 11,
+    "frame": "frame_0012.jpg",
+    "description": "Close-up of a zebra's striped legs as it walks along a sunlit, dusty path. Dry grass and scrub line the trail in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 12,
+    "frame": "frame_0013.jpg",
+    "description": "Close-up of a lion's front paws as it walks across sunlit sand, kicking up a small spray with each step and casting long shadows.",
+    "type": "video"
+  },
+  {
+    "timestamp": 13,
+    "frame": "frame_0014.jpg",
+    "description": "A small red toy car lies half-buried on white gravel among fallen leaves and twigs, with a blurred nest-like tangle of branches in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 14,
+    "frame": "frame_0015.jpg",
+    "description": "A bird is pecking at a small red, shiny object among pebbles and nesting material, inspecting or manipulating it. The scene suggests it may be collecting or arranging the item near its nest.",
+    "type": "video"
+  },
+  {
+    "timestamp": 15,
+    "frame": "frame_0016.jpg",
+    "description": "A round, woven grass nest hangs tucked among tall reeds and leaves. A small bird pokes its head out from the nest opening.",
+    "type": "video"
+  },
+  {
+    "timestamp": 16,
+    "frame": "frame_0017.jpg",
+    "description": "A small brown bird peeks out from the opening of a round, woven nest made of dried grasses. The nest hangs among tall green reeds and leaves.",
+    "type": "video"
+  },
+  {
+    "timestamp": 17,
+    "frame": "frame_0018.jpg",
+    "description": "A springbok-like antelope is captured mid-air in a high leap over the grassland. Another antelope stands nearby watching.",
+    "type": "video"
+  },
+  {
+    "timestamp": 18,
+    "frame": "frame_0019.jpg",
+    "description": "A gazelle-like antelope bends its head down to graze in a sunlit grassy field, framed against a soft, golden background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 19,
+    "frame": "frame_0020.jpg",
+    "description": "A springbok-like antelope is captured mid-leap over a grassy field, all four legs off the ground with its head lowered toward the vegetation.",
+    "type": "video"
+  },
+  {
+    "timestamp": 20,
+    "frame": "frame_0021.jpg",
+    "description": "A black-and-white penguin is sliding on its belly across the icy snow, seemingly tobogganing across the frozen landscape. The scene shows the bird low to the ground moving over a snowy plain.",
+    "type": "video"
+  },
+  {
+    "timestamp": 21,
+    "frame": "frame_0022.jpg",
+    "description": "A penguin is tobogganing across the ice, sliding on its belly with its flippers tucked in. The bird moves rightward across a snowy, icy surface with the sea in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 22,
+    "frame": "frame_0023.jpg",
+    "description": "A polar bear is stretched out on its side in deep snow, appearing to rest or sleep. The snowy landscape surrounds the animal.",
+    "type": "video"
+  },
+  {
+    "timestamp": 23,
+    "frame": "frame_0024.jpg",
+    "description": "A polar bear is lying on its side in the snow, appearing to rest or sleep. The surrounding snowy landscape looks calm and undisturbed.",
+    "type": "video"
+  },
+  {
+    "timestamp": 24,
+    "frame": "frame_0025.jpg",
+    "description": "A massive flock of pink flamingos packed tightly together, standing in shallow water with their long curved necks and black-tipped beaks.",
+    "type": "video"
+  },
+  {
+    "timestamp": 25,
+    "frame": "frame_0026.jpg",
+    "description": "A dense flock of pink flamingos fills the frame, standing closely together with their long necks and curved, black-tipped bills. The birds crowd the shallow water, creating a sea of repeating necks and heads.",
+    "type": "video"
+  },
+  {
+    "timestamp": 26,
+    "frame": "frame_0027.jpg",
+    "description": "A swimmer or snorkeler glides underwater over a coral reef with arms outstretched, sunlight streaming down from the surface and fish visible in the distance.",
+    "type": "video"
+  },
+  {
+    "timestamp": 27,
+    "frame": "frame_0028.jpg",
+    "description": "A swimmer/snorkeler is gliding over a coral reef underwater with an outstretched arm as sunlight filters down from the surface and a fish silhouette appears in the distance.",
+    "type": "video"
+  },
+  {
+    "timestamp": 28,
+    "frame": "frame_0029.jpg",
+    "description": "A diver in a white wetsuit and mask swims through a coral reef, reaching out toward a large yellow coral formation. Small fish and other reef structures surround them under a dark coral overhang.",
+    "type": "video"
+  },
+  {
+    "timestamp": 29,
+    "frame": "frame_0030.jpg",
+    "description": "A snorkeler wearing goggles is swimming underwater through a coral reef, reaching forward between large coral formations. Small fish swim nearby as light filters down from the surface.",
+    "type": "video"
+  },
+  {
+    "timestamp": 30,
+    "frame": "frame_0031.jpg",
+    "description": "A sea turtle is resting on a coral reef, nestled among sponges and hard corals beneath clear blue water. Small fish and reef formations fill the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 31,
+    "frame": "frame_0032.jpg",
+    "description": "A person in a wetsuit is jumping from one rocky outcrop to another over a gap of crashing seawater, holding a rope and a pole for balance. The scene shows turbulent white waves and jagged rocks below.",
+    "type": "video"
+  },
+  {
+    "timestamp": 32,
+    "frame": "frame_0033.jpg",
+    "description": "A person sits on a sunlit, rocky hillside with knees bent, gazing out across a dry valley and distant ridges under a clear blue sky. Tufts of grass and scattered rocks cover the slope around them.",
+    "type": "video"
+  },
+  {
+    "timestamp": 33,
+    "frame": "frame_0034.jpg",
+    "description": "A person sits on a grassy, rocky hillside with their knees drawn up, looking out over a dry valley and distant slopes under a clear blue sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 34,
+    "frame": "frame_0035.jpg",
+    "description": "A camel stands behind dry shrubs, peering toward the camera with its head and two humps visible against a pale blue sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 35,
+    "frame": "frame_0036.jpg",
+    "description": "A close-up of a crane's head and long beak against a clear blue sky. The bird's eye and distinctive red facial patch are clearly visible as it looks to the left.",
+    "type": "video"
+  },
+  {
+    "timestamp": 36,
+    "frame": "frame_0037.jpg",
+    "description": "A close-up profile of a gray crane with a red patch around its eye fills the right side of the frame against a clear blue sky. The bird looks alert, staring off to the right.",
+    "type": "video"
+  },
+  {
+    "timestamp": 37,
+    "frame": "frame_0038.jpg",
+    "description": "A sloth is floating at the water's surface with its head barely above the turquoise water. Lush green trees form the dense jungle shoreline in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 38,
+    "frame": "frame_0039.jpg",
+    "description": "A sloth is bobbing in clear turquoise water with its head and upper body above the surface. Lush green rainforest fills the background along the shoreline.",
+    "type": "video"
+  },
+  {
+    "timestamp": 39,
+    "frame": "frame_0040.jpg",
+    "description": "A large bird of prey glides across the frame with its wings fully outstretched, showing detailed feathers. It’s flying in front of a blurred blue-gray background that looks like a waterfall or rushing water.",
+    "type": "video"
+  },
+  {
+    "timestamp": 40,
+    "frame": "frame_0041.jpg",
+    "description": "A narrow gap between towering rocky cliffs opens onto a valley filled with a thick sea of clouds, with distant mountain peaks poking above the cloud layer. The scene is lit by clear blue sky, highlighting the textured rock faces.",
+    "type": "video"
+  },
+  {
+    "timestamp": 41,
+    "frame": "frame_0042.jpg",
+    "description": "Two towering rock faces frame a narrow gap overlooking a valley filled with low-lying clouds. Distant mountain peaks rise above the mist beneath a clear blue sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 42,
+    "frame": "frame_0043.jpg",
+    "description": "A close-up of bright orange flowers, with one bloom fully open showing its dark central disk and another bud partially unfurled against a backdrop of green leaves. The shot emphasizes the petals' shape and vivid color.",
+    "type": "video"
+  },
+  {
+    "timestamp": 43,
+    "frame": "frame_0044.jpg",
+    "description": "A close-up of a bright orange daisy-like flower with its petals fanned around a dark central disk. A bud and another partially visible bloom sit nearby among green leaves.",
+    "type": "video"
+  },
+  {
+    "timestamp": 44,
+    "frame": "frame_0045.jpg",
+    "description": "A middle-aged man sits at a desk, intently looking at a computer monitor. He appears focused while working in a home office or study, with bookshelves and a plant behind him.",
+    "type": "video"
+  },
+  {
+    "timestamp": 45,
+    "frame": "frame_0046.jpg",
+    "description": "A decorative iron-and-stone entrance sign reading \"University of California\" stands in the background while a dense bed of green shrubs fills the foreground. The shot emphasizes the landscaping in front of the campus entrance.",
+    "type": "video"
+  },
+  {
+    "timestamp": 46,
+    "frame": "frame_0047.jpg",
+    "description": "A man sits at a table in a room with bookshelves behind him, leaning forward and using hand gestures as he talks. He appears engaged in a conversation with someone off-camera.",
+    "type": "video"
+  },
+  {
+    "timestamp": 47,
+    "frame": "frame_0048.jpg",
+    "description": "A person with long blonde hair sits at a desk holding a pen, looking toward a bookshelf filled with books. The scene suggests they might be studying or taking notes.",
+    "type": "video"
+  },
+  {
+    "timestamp": 48,
+    "frame": "frame_0049.jpg",
+    "description": "An aerial view of a university campus dominated by a tall clock/bell tower surrounded by red-roofed academic buildings and green lawns. The city stretches out in the hazy distance under bright sunlight.",
+    "type": "video"
+  },
+  {
+    "timestamp": 49,
+    "frame": "frame_0050.jpg",
+    "description": "An aerial view of a university campus dominated by a tall stone bell tower rising above red-roofed buildings and green lawns. The surrounding city stretches out toward the horizon under bright, hazy sunlight.",
+    "type": "video"
+  },
+  {
+    "timestamp": 50,
+    "frame": "frame_0051.jpg",
+    "description": "Two people walk across a grassy lawn toward a large, columned neoclassical building on a sunny day. The scene shows trees and a clear sky framing the stately façade.",
+    "type": "video"
+  },
+  {
+    "timestamp": 51,
+    "frame": "frame_0052.jpg",
+    "description": "A large colony of penguins covers a windswept plain beneath a snow-capped mountain, while a couple of penguins waddle across the foreground.",
+    "type": "video"
+  },
+  {
+    "timestamp": 52,
+    "frame": "frame_0053.jpg",
+    "description": "A large colony of penguins covers a grassy plain beneath a snow‑capped mountain. In the foreground, one penguin is walking toward the group while others stand or nest nearby.",
+    "type": "video"
+  },
+  {
+    "timestamp": 53,
+    "frame": "frame_0054.jpg",
+    "description": "A dense swarm of bright red crabs is crawling across the leaf- and root-covered ground, moving together in a mass migration. The forest floor is carpeted with them as they travel.",
+    "type": "video"
+  },
+  {
+    "timestamp": 54,
+    "frame": "frame_0055.jpg",
+    "description": "Hundreds of bright red crabs carpet the forest floor, crawling together in a dense mass across leaves and rocks. It looks like a large-scale migration or group movement.",
+    "type": "video"
+  },
+  {
+    "timestamp": 55,
+    "frame": "frame_0056.jpg",
+    "description": "Hundreds of bright red land crabs carpet the leaf‑strewn forest floor, crawling together in a dense mass. They appear to be moving as a large, coordinated migration across the ground.",
+    "type": "video"
+  },
+  {
+    "timestamp": 56,
+    "frame": "frame_0057.jpg",
+    "description": "A large group of meerkats stands upright on their hind legs in a sandy, arid landscape, all alert and looking around. They appear to be on sentry duty, scanning the area for predators or threats.",
+    "type": "video"
+  },
+  {
+    "timestamp": 57,
+    "frame": "frame_0058.jpg",
+    "description": "A large elephant towers over a crowded herd of antelope and zebras, lifting its trunk. The smaller animals cluster closely around it, likely at a watering spot on the savannah.",
+    "type": "video"
+  },
+  {
+    "timestamp": 58,
+    "frame": "frame_0059.jpg",
+    "description": "A close-up of a white daisy-like flower with its petals open, revealing a dark central disk. Out-of-focus buds and green foliage fill the blurred background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 59,
+    "frame": "frame_0060.jpg",
+    "description": "A close-up of a white daisy-like flower in full bloom, its petals radiating from a dark, textured center. Blurred buds and green foliage fill the background, keeping the main flower sharply in focus.",
+    "type": "video"
+  },
+  {
+    "timestamp": 60,
+    "frame": "frame_0061.jpg",
+    "description": "A massive flock of white birds is flying low over a muddy wetland, filling the frame with hundreds of individuals in mid‑flight.",
+    "type": "video"
+  },
+  {
+    "timestamp": 61,
+    "frame": "frame_0062.jpg",
+    "description": "A massive flock of white birds densely scattered across a dark marsh or mudflat, many captured in mid-flight. The scene shows hundreds of birds spread out over the surface.",
+    "type": "video"
+  },
+  {
+    "timestamp": 62,
+    "frame": "frame_0063.jpg",
+    "description": "Aerial view of a large flock of small white birds scattered densely across a brown mudflat or marsh. They form many small clusters filling most of the frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 63,
+    "frame": "frame_0064.jpg",
+    "description": "A massive flock of white birds densely covers a dark body of water and the adjacent brown shoreline or marsh, with thousands of birds floating or resting on the surface. They form a speckled, evenly distributed pattern across the entire frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 64,
+    "frame": "frame_0065.jpg",
+    "description": "Three baboons are wading through shallow, grassy water; two in the foreground seem to be playing or foraging while a third watches from the bank behind them.",
+    "type": "video"
+  },
+  {
+    "timestamp": 65,
+    "frame": "frame_0066.jpg",
+    "description": "A small group of baboons is wading through shallow marsh water among tall grasses. Two younger baboons stand in the water—one lifting an arm—while another follows nearby on the grassy edge.",
+    "type": "video"
+  },
+  {
+    "timestamp": 66,
+    "frame": "frame_0067.jpg",
+    "description": "An aerial view shows a small herd of elephants walking single-file across a dry, sparsely vegetated plain. Their long shadows stretch across the pale ground as they move.",
+    "type": "video"
+  },
+  {
+    "timestamp": 67,
+    "frame": "frame_0068.jpg",
+    "description": "Aerial view of a herd of elephants walking in single file across a pale, sandy plain dotted with sparse shrubs. Their long shadows stretch out behind them on the ground.",
+    "type": "video"
+  },
+  {
+    "timestamp": 68,
+    "frame": "frame_0069.jpg",
+    "description": "A baboon is shown in profile, gazing into the distance as warm sunlight rim-lights its fur against a soft, blurred green background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 69,
+    "frame": "frame_0070.jpg",
+    "description": "A close-up profile of a baboon gazing into the distance, its fur softly backlit by warm sunlight. The animal appears calm and alert, taking in its surroundings.",
+    "type": "video"
+  },
+  {
+    "timestamp": 70,
+    "frame": "frame_0071.jpg",
+    "description": "Two colorful birds with long tails are flying low over a grassy field, wings outstretched as one follows the other. They appear to be gliding in close formation across the scene.",
+    "type": "video"
+  },
+  {
+    "timestamp": 71,
+    "frame": "frame_0072.jpg",
+    "description": "A brown bear stands on its hind legs, leaning against a tree and reaching up to grab or scratch at the branches in a forest clearing. The phrase \"Increase in joy\" is prominently overlaid across the left side of the frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 72,
+    "frame": "frame_0073.jpg",
+    "description": "A bear stands on its hind legs, leaning against a tree and reaching up to grab or chew a branch in a forest clearing. Large white text reading \"Increase in joy\" is overlaid on the left side of the image.",
+    "type": "video"
+  },
+  {
+    "timestamp": 73,
+    "frame": "frame_0074.jpg",
+    "description": "An adult giant panda cradles a small cub while resting amid bamboo and leafy undergrowth. The word \"Contentment\" is overlaid across the image.",
+    "type": "video"
+  },
+  {
+    "timestamp": 74,
+    "frame": "frame_0075.jpg",
+    "description": "Extreme close-up of a green amphibian/reptile's eye — the red iris with a vertical slit pupil catches the light and reflects its surroundings. The bumpy green skin around the eye is visible, with much of the frame in shadow.",
+    "type": "video"
+  },
+  {
+    "timestamp": 75,
+    "frame": "frame_0076.jpg",
+    "description": "A dramatic close-up of a green frog’s red eye with a vertical slit pupil fills the frame. The word \"Curiosity\" is superimposed across the eye, giving the image a thematic or title-like feel.",
+    "type": "video"
+  },
+  {
+    "timestamp": 76,
+    "frame": "frame_0077.jpg",
+    "description": "A close-up of a gorilla resting its chin on its hand, looking calm and contemplative among green foliage. A white, distressed logo/text is overlaid on the left side of the frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 77,
+    "frame": "frame_0078.jpg",
+    "description": "A giraffe peers over a tangle of thorny branches, nibbling on the foliage. Its head and ossicones are framed against a clear blue sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 78,
+    "frame": "frame_0079.jpg",
+    "description": "A close-up of a penguin's beak and neck as the bird appears to preen its feathers. The word \"Wonder\" is partially visible on the right side of the frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 79,
+    "frame": "frame_0080.jpg",
+    "description": "A close-up profile of an emperor penguin showing its black head, orange neck patch and beak, with the word \"Wonder\" overlaid to the right.",
+    "type": "video"
+  },
+  {
+    "timestamp": 80,
+    "frame": "frame_0081.jpg",
+    "description": "A black bird is fluttering above a grassy hillside. The right side of the frame displays the text \"Reductions in Tiredness.\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 81,
+    "frame": "frame_0082.jpg",
+    "description": "White text reading \"And low energy\" is overlaid on a pale, out-of-focus natural background with grasses. In the lower-right foreground a dark bird-like figure is visible, its head bowed or turned downward.",
+    "type": "video"
+  },
+  {
+    "timestamp": 82,
+    "frame": "frame_0083.jpg",
+    "description": "A llama-like camelid stands among tall cacti with its mouth slightly open. To the right, the phrase \"Reductions in stress\" is overlaid on the image.",
+    "type": "video"
+  },
+  {
+    "timestamp": 83,
+    "frame": "frame_0084.jpg",
+    "description": "A close-up of a llama standing among tall cacti, looking toward the camera. White overlay text reads \"Reductions in stress,\" suggesting a calming or promotional message.",
+    "type": "video"
+  },
+  {
+    "timestamp": 84,
+    "frame": "frame_0085.jpg",
+    "description": "A llama stands among tall, spiky cacti and looks directly at the camera with its mouth slightly open. White overlay text on the right reads \"Reductions in stress.\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 85,
+    "frame": "frame_0086.jpg",
+    "description": "A close-up of a llama standing among tall cacti in a desert-like setting, with the phrase \"Reductions in stress\" overlaid on the right side of the frame.",
+    "type": "video"
+  },
+  {
+    "timestamp": 86,
+    "frame": "frame_0087.jpg",
+    "description": "A lizard is captured mid-air with its wing-like skin flaps fully extended, gliding between trees against a pale sky. The silhouetted form and outstretched membranes suggest it's making a controlled leap from one branch to another.",
+    "type": "video"
+  },
+  {
+    "timestamp": 87,
+    "frame": "frame_0088.jpg",
+    "description": "A small gliding lizard (a \"flying\" Draco) is soaring through the air with its wing-like patagia fully extended, silhouetted against the sky between out-of-focus tree branches.",
+    "type": "video"
+  },
+  {
+    "timestamp": 88,
+    "frame": "frame_0089.jpg",
+    "description": "A small gliding lizard is airborne with its wing-like skin flaps fully extended, silhouetted against the bright sky. The backlighting highlights the patterned membranes while tree leaves frame the scene.",
+    "type": "video"
+  },
+  {
+    "timestamp": 89,
+    "frame": "frame_0090.jpg",
+    "description": "A Komodo dragon is moving toward the camera across a wet, sandy shoreline at low tide. Calm shallow water and distant rocky islands form the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 90,
+    "frame": "frame_0091.jpg",
+    "description": "A close-up of gorillas among leafy undergrowth, with an adult resting while a younger gorilla wriggles and reaches out, its mouth open. The scene looks calm and intimate, showing family interaction in the forest.",
+    "type": "video"
+  },
+  {
+    "timestamp": 91,
+    "frame": "frame_0092.jpg",
+    "description": "An elephant is submerged and moving underwater with its trunk reaching up toward the surface. Its legs are kicking along the sandy bottom, sending up a cloud of sediment.",
+    "type": "video"
+  },
+  {
+    "timestamp": 92,
+    "frame": "frame_0093.jpg",
+    "description": "A baby elephant is swimming underwater, kicking its legs and stirring up a cloud of sediment from the riverbed. Its trunk and body are visible beneath the surface as it moves forward.",
+    "type": "video"
+  },
+  {
+    "timestamp": 93,
+    "frame": "frame_0094.jpg",
+    "description": "A black butterfly-like insect with two small pale spots and a bright blue band on its lower wing surface is perched on a log. Surrounding green leaves suggest it’s resting in a forested area.",
+    "type": "video"
+  },
+  {
+    "timestamp": 94,
+    "frame": "frame_0095.jpg",
+    "description": "A giraffe's head and upper neck fill the frame as it looks straight toward the camera against a clear blue sky. Its ears, ossicones, and patterned neck are clearly visible.",
+    "type": "video"
+  },
+  {
+    "timestamp": 95,
+    "frame": "frame_0096.jpg",
+    "description": "A man sits in a chair in front of a book-filled shelf and appears to be speaking directly to the camera in an interview-style shot. A large potted plant is visible to his left.",
+    "type": "video"
+  },
+  {
+    "timestamp": 96,
+    "frame": "frame_0097.jpg",
+    "description": "A man sits in a chair in front of a bookshelf and appears to be speaking to the camera, as if giving an interview or lecture. Books and a large plant are visible in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 97,
+    "frame": "frame_0098.jpg",
+    "description": "A man sits in a chair in front of a bookshelf and a large plant, looking toward the camera as if speaking in an interview or recording.",
+    "type": "video"
+  },
+  {
+    "timestamp": 98,
+    "frame": "frame_0099.jpg",
+    "description": "A middle-aged man sits facing the camera in a room lined with bookshelves, wearing a dark sweater over a collared shirt and looking serious. A large houseplant is visible to his left, giving the scene a cozy, study-like atmosphere.",
+    "type": "video"
+  },
+  {
+    "timestamp": 99,
+    "frame": "frame_0100.jpg",
+    "description": "A man wearing a navy sweater and collared shirt is seated in front of a bookshelf packed with books and a tall plant. He appears to be speaking, caught mid-sentence while facing the camera.",
+    "type": "video"
+  },
+  {
+    "timestamp": 100,
+    "frame": "frame_0101.jpg",
+    "description": "A man sits in a chair in front of a bookshelf and appears to be speaking to the camera, caught mid-sentence. Houseplants and rows of books form the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 101,
+    "frame": "frame_0102.jpg",
+    "description": "A wide river rushes between steep, green-clad cliffs while multiple large waterfalls cascade down into it, sending up mist and churning the water into frothy rapids. The scene is lush and dramatic, with clouds overhead and spray obscuring parts of the falls.",
+    "type": "video"
+  },
+  {
+    "timestamp": 102,
+    "frame": "frame_0103.jpg",
+    "description": "A broad river rushes through a rocky gorge while multiple powerful waterfalls cascade down the lush, green cliffs on both sides. Thick mist rises from the plunging water under a partly cloudy sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 103,
+    "frame": "frame_0104.jpg",
+    "description": "A wide panoramic view of powerful waterfalls cascading from lush, green cliffs into a turbulent river, sending up a veil of mist. Rocky banks line the rushing water as it flows downstream between the falls.",
+    "type": "video"
+  },
+  {
+    "timestamp": 104,
+    "frame": "frame_0105.jpg",
+    "description": "Aerial view of jagged, snow-covered mountain peaks and steep cliffs, with low clouds or fog pooling in the valleys. Icy water and distant snowfields are visible beyond the ridge.",
+    "type": "video"
+  },
+  {
+    "timestamp": 105,
+    "frame": "frame_0106.jpg",
+    "description": "Aerial view of rugged, snow-covered mountain peaks and steep rock faces rising through a layer of low cloud or fog beneath a clear blue sky. The scene emphasizes the stark contrast between bright snow and dark, exposed rock.",
+    "type": "video"
+  },
+  {
+    "timestamp": 106,
+    "frame": "frame_0107.jpg",
+    "description": "Two scuba divers are exploring an underwater cave, their dive lights cutting through the dark water and illuminating stalactites and rocky formations. The scene is bathed in eerie blue-green light as they move through the cavern.",
+    "type": "video"
+  },
+  {
+    "timestamp": 107,
+    "frame": "frame_0108.jpg",
+    "description": "Two scuba divers navigate a dark, turquoise-lit underwater cave (cenote), their lights revealing hanging stalactites and jagged rock formations.",
+    "type": "video"
+  },
+  {
+    "timestamp": 108,
+    "frame": "frame_0109.jpg",
+    "description": "A bear is sitting on the forest floor with its back against a tree, leaning and rubbing or scratching itself along the trunk. The scene is set in a green, wooded area.",
+    "type": "video"
+  },
+  {
+    "timestamp": 109,
+    "frame": "frame_0110.jpg",
+    "description": "A group of penguins stands on a rocky outcrop, with one prominent bird in the foreground and others clustered behind it. They appear to be looking around or surveying their surroundings.",
+    "type": "video"
+  },
+  {
+    "timestamp": 110,
+    "frame": "frame_0111.jpg",
+    "description": "Two penguins stand close together on a rocky outcrop with a third penguin blurred behind them. They appear to be looking toward the camera against a bright, icy background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 111,
+    "frame": "frame_0112.jpg",
+    "description": "A brightly colored bird with a yellow head and brown-red body is perched on a thin branch, gripping it with its feet. The bird is turned toward the twig, appearing to inspect or peck at a small bud.",
+    "type": "video"
+  },
+  {
+    "timestamp": 112,
+    "frame": "frame_0113.jpg",
+    "description": "A brightly colored bird perches on a thin branch, facing away and gripping the twig. Its yellow head, brown wings and long reddish tail stand out against the blurred green background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 113,
+    "frame": "frame_0114.jpg",
+    "description": "A group of whales is surfacing and diving in choppy water, their backs and blowholes visible as they create splashes. Snow-covered mountains and ice line the distant coastline under a cloudy sky.",
+    "type": "video"
+  },
+  {
+    "timestamp": 114,
+    "frame": "frame_0115.jpg",
+    "description": "Two whales are lifting their tails (flukes) as they dive beneath the surface. The scene takes place in cold, choppy waters with snow-covered mountains and ice in the background.",
+    "type": "video"
+  },
+  {
+    "timestamp": 115,
+    "frame": "frame_0116.jpg",
+    "description": "Two whale tails (flukes) are rising out of the icy ocean as the whales dive, sending splashes and a trailing wake across the water. Snow-covered mountains and a cloudy sky form the backdrop.",
+    "type": "video"
+  },
+  {
+    "timestamp": 116,
+    "frame": "frame_0117.jpg",
+    "description": "A small tree frog is caught mid-leap, pushing off a wet branch with its legs extended and water droplets trailing behind. The blurred green foliage in the background suggests a rainforest or jungle setting.",
+    "type": "video"
+  },
+  {
+    "timestamp": 117,
+    "frame": "frame_0118.jpg",
+    "description": "A blurred figure leans over the grassy rim of a large, dark sinkhole or cave. A bright beam of light illuminates a patch of the rocky wall deep inside the void.",
+    "type": "video"
+  },
+  {
+    "timestamp": 118,
+    "frame": "frame_0119.jpg",
+    "description": "A person is mid-air, falling or jumping into a deep, dark chasm or sinkhole with arms outstretched. The rocky walls of the hole and green vegetation along the rim are visible.",
+    "type": "video"
+  },
+  {
+    "timestamp": 119,
+    "frame": "frame_0120.jpg",
+    "description": "An aerial view of a camel caravan crossing rippled sand dunes, with the animals and their handlers walking in a line. The low sun casts long, dramatic shadows behind them across the desert.",
+    "type": "video"
+  },
+  {
+    "timestamp": 120,
+    "frame": "frame_0121.jpg",
+    "description": "Two hippopotamuses are rearing up and clashing with their mouths wide open, splashing water as they fight. Small birds can be seen perched on one hippo's back.",
+    "type": "video"
+  },
+  {
+    "timestamp": 121,
+    "frame": "frame_0122.jpg",
+    "description": "A mixed herd of African wildlife — giraffes, zebras, ostriches, antelopes and more — gathers around a watering hole on a dry savannah. They mill about, drinking and grazing as dust rises from the ground.",
+    "type": "video"
+  },
+  {
+    "timestamp": 122,
+    "frame": "frame_0123.jpg",
+    "description": "A big spotted cat is crouched at the water’s edge, lunging forward and swiping at the river to send up a splash.",
+    "type": "video"
+  },
+  {
+    "timestamp": 123,
+    "frame": "frame_0124.jpg",
+    "description": "A large splash erupts at the water’s edge, sending muddy water and droplets flying into the air against a grassy shoreline. It looks like something has just landed or plunged into the shallow water.",
+    "type": "video"
+  },
+  {
+    "timestamp": 124,
+    "frame": "frame_0125.jpg",
+    "description": "A small, bright red frog perches on a glossy green palm frond while water splashes around it. Droplets scatter into sparkling bokeh, giving the scene a dynamic, rain-soaked look.",
+    "type": "video"
+  },
+  {
+    "timestamp": 125,
+    "frame": "frame_0126.jpg",
+    "description": "A small lizard is perched upright on its hind legs on a rough rock as tiny particles or snowflakes drift around it. Overlaid text at the top asks, \"Are you getting a sense of real happiness?\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 126,
+    "frame": "frame_0127.jpg",
+    "description": "The frame looks over a rocky cliff into a deep, green valley with a narrow waterfall or stream tumbling down the center. Superimposed text at the top asks, \"Are you getting a sense of real happiness?\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 127,
+    "frame": "frame_0128.jpg",
+    "description": "A powerful waterfall plunges down a cliff, sending mist and spray over rocks and creating a faint rainbow against the lush green valley. White text across the top asks, \"Are you getting a sense of real happiness?\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 128,
+    "frame": "frame_0129.jpg",
+    "description": "A powerful waterfall plunges into a deep, shadowy gorge, sending up mist that creates a faint rainbow. Large overlay text asks, \"Are you getting a sense of real happiness?\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 129,
+    "frame": "frame_0130.jpg",
+    "description": "An aerial view shows a waterfall plunging into a deep, shadowed chasm, throwing up mist that forms a small rainbow. Large white text over the image asks, \"Are you getting a sense of real happiness?\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 130,
+    "frame": "frame_0131.jpg",
+    "description": "A lone figure stands silhouetted on a cliff edge watching the sun set over a deep valley. Overlaid text invites viewers to \"Find out more and join the project\" at www.realhappinessproject.com.",
+    "type": "video"
+  },
+  {
+    "timestamp": 131,
+    "frame": "frame_0132.jpg",
+    "description": "A lone figure stands on the edge of a cliff watching the sun set over a deep valley, creating a quiet, silhouetted scene. Text at the bottom invites viewers to find out more and join the project at www.realhappinessproject.com.",
+    "type": "video"
+  },
+  {
+    "timestamp": 132,
+    "frame": "frame_0133.jpg",
+    "description": "A satellite-like view of Earth centered on the Indian subcontinent with clouds and the planet’s curvature visible. Overlaid text invites viewers to find out more and join the project at www.realhappinessproject.com.",
+    "type": "video"
+  },
+  {
+    "timestamp": 133,
+    "frame": "frame_0134.jpg",
+    "description": "A view of Earth from space centered on the Indian subcontinent and the Himalayas, with a faint crescent graphic overlay. Promotional text across the bottom invites viewers to \"Find out more and join the project at www.realhappinessproject.com.\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 134,
+    "frame": "frame_0135.jpg",
+    "description": "A view of Earth from space fills the frame while translucent branding and promotional text for BBC Earth's \"Real Happiness Project\" — including the URL www.realhappinessproject.com — are overlaid.",
+    "type": "video"
+  },
+  {
+    "timestamp": 135,
+    "frame": "frame_0136.jpg",
+    "description": "A view of Earth from space (showing parts of Asia) with the BBC Earth \"real happiness project\" logo and call-to-action text overlaid. The frame also displays the website URL www.realhappinessproject.com inviting viewers to find out more and join the project.",
+    "type": "video"
+  },
+  {
+    "timestamp": 136,
+    "frame": "frame_0137.jpg",
+    "description": "A view of Earth from space fills the frame while the BBC Earth \"Real Happiness Project\" logo is overlaid at center. A call-to-action and the website URL www.realhappinessproject.com are displayed across the bottom.",
+    "type": "video"
+  },
+  {
+    "timestamp": 137,
+    "frame": "frame_0138.jpg",
+    "description": "A view of Earth from space fills the frame with the BBC Earth \"Real Happiness Project\" logo overlaid, accompanied by a call-to-action: \"Find out more and join the project at www.realhappinessproject.com.\"",
+    "type": "video"
+  },
+  {
+    "timestamp": 138,
+    "frame": "frame_0139.jpg",
+    "description": "A view of Earth from space fills the frame with the BBC Earth \"real happiness project\" logo overlaid near the center. White text at the bottom invites viewers to find out more and join at www.realhappinessproject.com.",
+    "type": "video"
+  },
+  {
+    "timestamp": 139,
+    "frame": "frame_0140.jpg",
+    "description": "A view of Earth from space with the BBC Earth \"Real Happiness Project\" logo overlaid. Text at the bottom directs viewers to visit www.realhappinessproject.com to find out more and join the project.",
+    "type": "video"
+  },
+  {
+    "timestamp": 140,
+    "frame": "frame_0141.jpg",
+    "description": "The frame is almost completely black with no discernible objects or details visible, appearing to be a fully dark or unlit scene.",
+    "type": "video"
+  },
+  {
+    "timestamp": 141,
+    "frame": "frame_0142.jpg",
+    "description": "The frame is completely black with no discernible shapes, subjects, or details — it appears to be a blank or dark screen.",
+    "type": "video"
+  }
+]
