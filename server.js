@@ -36,9 +36,25 @@ async function isDuplicate(fileHash) {
   return data?.length > 0;
 }
 
+async function findExistingFrame(fileHash, type) {
+  const { data } = await supabase
+    .from('seekr_media')
+    .select('frame')
+    .eq('file_hash', fileHash)
+    .eq('type', type)
+    .limit(1);
+  return data?.[0]?.frame ? path.basename(data[0].frame) : null;
+}
+
 const fsp = fs.promises;
 
 const searchRequests = new Map();
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, entry] of searchRequests) {
+    if (now > entry.reset) searchRequests.delete(ip);
+  }
+}, 60_000);
 function checkRateLimit(ip) {
   const now = Date.now();
   const entry = searchRequests.get(ip) ?? { count: 0, reset: now + 60_000 };
@@ -84,12 +100,7 @@ app.post('/api/upload', videoUpload.single('video'), async (req, res) => {
     if (await isDuplicate(fileHash)) {
       console.log(`[DUPLICATE] Video rejected: ${req.file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
       await fsp.unlink(newPath);
-      const videoFiles = await fsp.readdir('video-in');
-      let existingFile = null;
-      for (const f of videoFiles) {
-        if (!ALLOWED_VIDEO_EXT.test(f)) continue;
-        if (await hashFile(path.join('video-in', f)) === fileHash) { existingFile = f; break; }
-      }
+      const existingFile = await findExistingFrame(fileHash, 'video');
       return res.status(409).json({ error: 'This video has already been uploaded and processed', existingFile });
     }
     console.log(`[NEW] Processing video: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
@@ -119,8 +130,7 @@ app.post('/api/upload-audio', audioUpload.single('audio'), async (req, res) => {
     if (await isDuplicate(fileHash)) {
       console.log(`[DUPLICATE] Audio rejected: ${req.file.originalname} (hash: ${fileHash.slice(0, 12)}...)`);
       await fsp.unlink(newPath);
-      const { data: existing } = await supabase.from('seekr_media').select('frame').eq('file_hash', fileHash).eq('type', 'audio').limit(1);
-      const existingFile = existing?.[0]?.frame ? path.basename(existing[0].frame) : null;
+      const existingFile = await findExistingFrame(fileHash, 'audio');
       return res.status(409).json({ error: 'This audio has already been uploaded and processed', existingFile });
     }
     console.log(`[NEW] Processing audio: ${safeName} (hash: ${fileHash.slice(0, 12)}...)`);
@@ -170,8 +180,8 @@ app.get('/api/videos', async (req, res) => {
     fsp.readdir('./video-in'),
     fsp.readdir('./audio-in'),
   ]);
-  const videos = all_videos.filter(f => /\.(mp4|mov|avi|webm)$/i.test(f));
-  const audios = all_audios.filter(f => /\.(mp3|mp4|mpeg|mpga|m4a|wav|webm)$/i.test(f));
+  const videos = all_videos.filter(f => ALLOWED_VIDEO_EXT.test(f));
+  const audios = all_audios.filter(f => ALLOWED_AUDIO_EXT.test(f));
   res.json({ videos, audios });
 });
 

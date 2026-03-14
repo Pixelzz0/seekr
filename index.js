@@ -128,8 +128,7 @@ export async function processAudio(audioPath, filename, fileHash) {
 export async function processImages(images) {
   console.log(`Processing ${images.length} images...`);
 
-  for (const { path: imagePath, filename, fileHash } of images) {
-
+  await Promise.all(images.map(async ({ path: imagePath, filename, fileHash }) => {
     const imageData = fs.readFileSync(imagePath, { encoding: 'base64' });
     const ext = path.extname(filename).slice(1).toLowerCase();
     const mimeType = ext === 'jpg' ? 'jpeg' : ext;
@@ -155,7 +154,7 @@ export async function processImages(images) {
     console.log(`${filename}: ${description}`);
 
     await embedAndStore([{ timestamp: 0, frame: `/images/${filename}`, description, type: 'image' }], fileHash);
-  }
+  }));
 
   console.log('All images processed!');
 }
