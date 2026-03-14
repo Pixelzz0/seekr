@@ -185,13 +185,13 @@ app.get('/api/videos', async (req, res) => {
   res.json({ videos, audios });
 });
 
-app.get('/api/random-images', async (req, res) => {
+app.get('/api/images', async (req, res) => {
   try {
     const { data, error } = await supabase
       .from('seekr_media')
       .select('frame, description')
       .eq('type', 'image')
-      .limit(5);
+      .order('id', { ascending: false });
     if (error) return res.status(500).json({ error: error.message });
     res.json(data);
   } catch (err) {
