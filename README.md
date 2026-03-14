@@ -3,7 +3,7 @@
 Semantic media search engine. Upload videos, audio, or images and search through them using natural language.
 
 <img width="1920" height="957" alt="image" src="https://github.com/user-attachments/assets/acf101b6-056a-4908-bb75-ba3de5b5fd9f" />
-<img width="1920" height="956" alt="image" src="https://github.com/user-attachments/assets/42e1d26d-31b0-459d-910d-3cbfc24f94e9" />
+<img width="1920" height="956" alt="image" src="Screenshot 2026-03-14 at 5.15.13 PM.png" />
 
 
 
